@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "task1": "nodemon task1.js",
+    "task1": "nodemon --exec babel-node task1.js",
     "task2": "nodemon --exec babel-node task2.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -25,6 +25,7 @@
   "devDependencies": {
     "@babel/core": "7.9.6",
     "@babel/node": "7.8.7",
-    "@babel/preset-env": "7.9.6"
+    "@babel/preset-env": "7.9.6",
+    "eslint": "7.0.0"
   }
 }
