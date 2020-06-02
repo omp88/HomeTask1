@@ -1,5 +1,5 @@
 
-let userStorage = function () {
+const userStorage = function () {
 
     const users = new Map();
 
