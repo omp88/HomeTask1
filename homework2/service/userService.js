@@ -11,7 +11,7 @@ export function getUser(id) {
 }
 
 export function createUser(params) {
-  const id = 'l' + idNum++;
+  const id = `l${idNum++}`;
   const user = new User(id, params.login, params.password, params.age, params.isDeleted);
   storage.putUser(user);
   return id;
@@ -19,7 +19,9 @@ export function createUser(params) {
 
 export function updateUser(id, updateUser) {
   const user = storage.getUser(id);
-  const { login, password, age, isDeleted } = updateUser;
+  const {
+    login, password, age, isDeleted,
+  } = updateUser;
   if (login) user.login = login;
   if (password) user.password = password;
   if (age) user.age = age;

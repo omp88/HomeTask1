@@ -2,7 +2,6 @@ import Joi from '@hapi/joi';
 
 export default function userValidation() {
   return (req, res, next) => {
-
     const schema = Joi.object({
       login: Joi.string()
         .min(5)
